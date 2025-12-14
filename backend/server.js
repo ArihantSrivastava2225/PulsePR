@@ -12,6 +12,8 @@ import campaignRoutes from './routes/campaign.routes.js';
 import chatRoutes from './routes/chat.routes.js';
 import eventRoutes from './routes/event.routes.js';
 import teamRoutes from './routes/team.routes.js';
+import insightsRoutes from './routes/insights.routes.js';
+import mailRoutes from './routes/mail.routes.js';
 
 dotenv.config();
 
@@ -145,6 +147,8 @@ app.use('/api/campaigns', campaignRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/teams', teamRoutes);
+app.use('/api/insights', insightsRoutes);
+app.use('/api/mail', mailRoutes);
 
 httpServer.listen(PORT, () => {
     connectDB();
